@@ -1,0 +1,70 @@
+html, body, div, span, p, a, del, em, img, ol, ul, li, fieldset, form, label {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {
+    display: block;
+}
+
+html, body {
+    line-height: 1;
+    min-height: 100%;
+    font-size: 18px;
+    font-family: 'Microsoft yahei', Artial, Verdana, sans-serif;
+}
+
+.drangon-ball-char {
+    top: 300px;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.index h1 {
+    top: 100px;
+}
+
+.skrollable {
+    /*
+     * First-level skrollables are positioned relative to window
+     */
+    position: fixed;
+
+    /*
+     * Skrollables by default have a z-index of 100 in order to make it easy to position elements in front/back without changing each skrollable
+     */
+    z-index: 100;
+}
+
+.skrollr-mobile .skrollable {
+    /*
+        May cause issues on Android default browser (see #331 on GitHub).
+    */
+    position: absolute;
+}
+
+.skrollable .skrollable {
+    /*
+     * Second-level skrollables are positioned relative their parent skrollable
+     */
+    position: absolute;
+}
+
+.skrollable .skrollable .skrollable {
+    /*
+     * Third-level (and below) skrollables are positioned static
+     */
+    position: static;
+}
+
+
